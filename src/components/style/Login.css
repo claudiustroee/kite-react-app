@@ -1,5 +1,44 @@
+:root {
+    background-color: #7BB2BE !important;
+   
+}
+
 .login-wrapper {
+    background-color: #7BB2BE !important;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+}
+
+.login-image {
+    height: 20rem;
+    margin: 6rem clamp(6rem, 30vw, 20rem);
+    margin-bottom: 1.5rem;
+
+}
+
+.from-control{
+    background-color: #212529 !important;
+    border: #212529 !important;
+}
+
+.form-label{
+    color: #212529 !important;
+}
+
+.form-button{
+    color: #adb5bd !important;
+}
+
+input, select, textarea{
+    color:#adb5bd !important;
+}
+
+textarea:focus, input:focus {
+    color: #adb5bd !important;
+    outline: none !important;
+    border-color: #212529 !important;
+    box-shadow: 0 0 10px #212529 !important;
+    
 }

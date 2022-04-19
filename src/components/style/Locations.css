@@ -1,3 +1,15 @@
+body {
+    background-color: #212529;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #7BB2BE !important;
+}
+
 .wrapper {
-    padding: 15px;
+    padding: 1rem;
+}
+
+.locations-table{
+    margin-bottom: 0 !important;
 }
