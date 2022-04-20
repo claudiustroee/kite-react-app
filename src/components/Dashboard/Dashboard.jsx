@@ -1,11 +1,18 @@
 import React from "react";
 import Locations from "../Locations/Locations";
 import { Navbar, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+// import { Link, useNavigate } from "react-router-dom";
 import Map from "../Map/Map";
 import "../style/Dashboard.css";
+import AddSpot from "./AddSpot";
 
 export default function Dashboard() {
+  // const navigate = useNavigate();
+  function logOut() {
+    sessionStorage.clear();
+    // navigate('/login');
+    window.location.reload();
+  }
   return (
     <div>
       <Navbar bg="dark" className="justify-content-start">
@@ -18,13 +25,13 @@ export default function Dashboard() {
             alt="navlogo"
           />
         </Navbar.Brand>
-
-        <Button className="navbutton1" variant="primary" size="sm">
-          AddSpot
-        </Button>
-
-        <Button className="navbutton2" variant="primary" size="sm">
-          <Link to="/login"></Link>
+        <AddSpot/>
+        <Button
+          onClick={logOut}
+          className="navbutton2"
+          variant="primary"
+          size="sm"
+        >
           Logout
         </Button>
       </Navbar>
