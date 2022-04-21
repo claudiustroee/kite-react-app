@@ -11,7 +11,7 @@ body {
     color: #212529 !important;
     background-color: #7BB2BE !important;
     border: #7BB2BE !important;
-    margin-left: auto;
+    margin-left: auto !important; 
     margin-right: 1rem;
 }
 

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import Popup from "reactjs-popup";
 import { Button, Form } from "react-bootstrap";
-import "../style/Popup.css";
 import Calendar from "react-calendar";
 import moment from "moment";
 import "react-calendar/dist/Calendar.css";
+import "../style/Popup.css";
 import '../style/AddSpot.css'
 
 export default function AddSpot() {
@@ -26,12 +26,12 @@ export default function AddSpot() {
         <Form>
           <Form.Group className="mb-3">
             <Form.Label>Name</Form.Label>
-            <Form.Control size="sm" type="text" placeholder="Small text" />
+            <Form.Control size="sm" type="text" placeholder="" />
           </Form.Group>
 
           <Form.Group className="mb-3" >
             <Form.Label>Country</Form.Label>
-            <Form.Control size="sm" type="text" placeholder="Small text" />
+            <Form.Control size="sm" type="text" placeholder="" />
           </Form.Group>
 
           <Form.Group className="mb-3">

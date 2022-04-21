@@ -1,13 +1,25 @@
-import * as React from "react";
+import React from "react";
+import { Navbar } from "react-bootstrap";
+import AddSpot from "./AddSpot";
+import Logout from "./Logout";
 
-const logo = require("../../static/assets/images/logo.png");
 
-const NavBar = () => {
+export default function NavBar() {
   return (
-    <div className="nav">
-      <img src={logo} alt="Logo" className="logo" />
+    <div>
+      <Navbar bg="dark" className="justify-content-start">
+        <Navbar.Brand className="logo">
+          <img
+            src="/logo192.png"
+            width="75"
+            height="30"
+            className="d-inline-block align-top"
+            alt="navlogo"
+          />
+        </Navbar.Brand>
+        <AddSpot />
+        <Logout />
+      </Navbar>
     </div>
   );
-};
-
-export default NavBar;
+}

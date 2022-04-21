@@ -3,7 +3,7 @@ import { Table, Button } from "react-bootstrap";
 import { getLocations } from "../../services/locations";
 import "../style/Locations.css";
 
-function Locations() {
+export default function Locations() {
   const [locations, setList] = useState([]);
 
   useEffect(() => {
@@ -16,8 +16,11 @@ function Locations() {
     return () => (mounted = false);
   }, []);
 
+  
+
   return (
     <div>
+      
       <div className="wrapper">
         <h2>Locations</h2>
       </div>
@@ -63,4 +66,3 @@ function Locations() {
   );
 }
 
-export default Locations;
