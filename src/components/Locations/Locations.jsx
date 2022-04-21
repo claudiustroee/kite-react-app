@@ -1,68 +1,65 @@
 import React, { useEffect, useState } from "react";
-import { Table, Button } from "react-bootstrap";
+import { Table } from "react-bootstrap";
+import TableBody from "./TableBody";
+import TableHead from "./TableHead";
 import { getLocations } from "../../services/locations";
 import "../style/Locations.css";
 
 export default function Locations() {
-  const [locations, setList] = useState([]);
+  const [tableData, setTableData] = useState([]);
 
   useEffect(() => {
     let mounted = true;
     getLocations().then((items) => {
       if (mounted) {
-        setList(items);
+        setTableData(items);
       }
     });
     return () => (mounted = false);
   }, []);
 
-  
+  const columns = [
+    { label: "Name", accessor: "name", sortable: true },
+    { label: "Country", accessor: "country", sortable: true },
+    { label: "Latitude", accessor: "lat", sortable: false },
+    { label: "Longitude", accessor: "long", sortable: false },
+    { label: "Probability", accessor: "probability", sortable: true },
+    { label: "When to go", accessor: "month", sortable: true },
+  ];
+
+  const handleSorting = (sortField, sortOrder) => {
+    if (sortField) {
+      const sorted = [...tableData].sort((a, b) => {
+        if (a[sortField] === null) return 1;
+        if (b[sortField] === null) return -1;
+        if (a[sortField] === null && b[sortField] === null) return 0;
+        return (
+          a[sortField].toString().localeCompare(b[sortField].toString(), "en", {
+            numeric: true,
+          }) * (sortOrder === "asc" ? 1 : -1)
+        );
+      });
+      setTableData(sorted);
+    }
+  };
 
   return (
     <div>
-      
       <div className="wrapper">
         <h2>Locations</h2>
       </div>
       <div>
-        <Table striped bordered hover variant="dark" className="locations-table">
-          <thead>
-            <tr>
-              <th>
-                <Button variant="dark">Name</Button>
-              </th>
-              <th>
-                <Button variant="dark">Country</Button>
-              </th>
-              <th>
-                <Button variant="dark">Latitude</Button>
-              </th>
-              <th>
-                <Button variant="dark">Longitute</Button>
-              </th>
-              <th>
-                <Button variant="dark">Probability</Button>
-              </th>
-              <th>
-                <Button variant="dark">When to go</Button>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {locations.map((item) => (
-              <tr key={item.id}>
-                <td>{item.name}</td>
-                <td>{item.country}</td>
-                <td>{item.lat}</td>
-                <td>{item.long}</td>
-                <td>{item.probability}</td>
-                <td>{item.month}</td>
-              </tr>
-            ))}
-          </tbody>
+        <Table
+          striped
+          bordered
+          hover
+          variant="dark"
+          className="locations-table"
+        >
+          <TableHead {...{ columns, handleSorting }} />
+          <TableBody {...{ columns, tableData }} />
         </Table>
       </div>
     </div>
   );
 }
-
