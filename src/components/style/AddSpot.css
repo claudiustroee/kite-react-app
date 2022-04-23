@@ -1,11 +1,42 @@
-spot-wrapper{
-    margin: 10px;
+.navbutton1 {
+  color: #212529 !important;
+  background-color: #7bb2be !important;
+  border: #7bb2be !important;
+  margin-right: 1rem;
 }
 
-.navbutton1{
-    color: #212529 !important;
-    background-color: #7BB2BE !important;
-    border: #7BB2BE !important;
-    margin-left: auto !important; 
-    margin-right: 1rem;
+input,
+select,
+textarea {
+  color: black !important;
+}
+
+textarea:focus,
+input:focus {
+  color: black !important;
+  outline: none !important;
+
+  box-shadow: none !important;
+}
+
+.popup-content {
+  margin: auto;
+  background: white;
+  width: 60%;
+  padding: .5rem;
+}
+.popup-arrow {
+  color: transparent;
+}
+[role="tooltip"].popup-content {
+  width: 12rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 3px;
+}
+
+.popup-overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+[data-popup="tooltip"].popup-overlay {
+  background: transparent;
 }

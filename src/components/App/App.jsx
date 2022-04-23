@@ -4,8 +4,6 @@ import useToken from './useToken';
 import Dashboard from "../Dashboard/Dashboard";
 import Login from '../Login/Login';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../style/App.css';
-
 
 
 export default function App() {

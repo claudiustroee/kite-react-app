@@ -13,7 +13,7 @@
 
 .login-image {
     height: 20rem;
-    margin: 6rem clamp(6rem, 30vw, 20rem);
+    margin: 5rem clamp(6rem, 30vw, 20rem);
     margin-bottom: 1.5rem;
 
 }

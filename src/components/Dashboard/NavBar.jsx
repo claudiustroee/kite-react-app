@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar } from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
 import AddSpot from "./AddSpot";
 import Logout from "./Logout";
 
@@ -17,8 +17,10 @@ export default function NavBar() {
             alt="navlogo"
           />
         </Navbar.Brand>
-        <AddSpot />
-        <Logout />
+        <Nav cclassName="justify-content-end">
+          <AddSpot />
+          <Logout />
+        </Nav>
       </Navbar>
     </div>
   );

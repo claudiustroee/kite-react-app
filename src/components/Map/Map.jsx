@@ -21,11 +21,11 @@ export function Map() {
     return () => (mounted = false);
   }, []);
 
-  // const filter = locations.filter(loc => loc.country ==="" ).filter(loc => loc.probability ==="" );
+  
   const cameraPosition = [lat, lng];
   return (
     <MapContainer
-      style={{ height: "450px", width: "100%" }}
+      style={{ height: "30rem", width: "100%" }}
       center={cameraPosition}
       zoom={zoom}
       scrollWheelZoom={false}

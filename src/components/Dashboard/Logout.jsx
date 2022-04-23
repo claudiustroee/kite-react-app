@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "react-bootstrap";
-
+import "../style/Logout.css"
 
 
 export default function Logout() {
@@ -9,7 +9,7 @@ export default function Logout() {
     window.location.reload();
   }
   return (
-    <div>
+    <div >
       <Button
         onClick={logOut}
         className="navbutton2"

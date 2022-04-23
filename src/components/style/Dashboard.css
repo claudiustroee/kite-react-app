@@ -5,20 +5,3 @@ body {
 .logo{
     margin: 0 1rem;
 }
-
-
-.navbutton1{
-    color: #212529 !important;
-    background-color: #7BB2BE !important;
-    border: #7BB2BE !important;
-    margin-left: auto !important; 
-    margin-right: 1rem;
-}
-
-.navbutton2{
-    color: #212529 !important;
-    background-color: #7BB2BE !important;
-    border: #7BB2BE !important;
-    margin-right: 1rem;
-}
-
