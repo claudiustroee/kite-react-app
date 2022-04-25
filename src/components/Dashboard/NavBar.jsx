@@ -17,7 +17,7 @@ export default function NavBar() {
             alt="navlogo"
           />
         </Navbar.Brand>
-        <Nav cclassName="justify-content-end">
+        <Nav className="justify-content-end">
           <AddSpot />
           <Logout />
         </Nav>
