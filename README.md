@@ -10,6 +10,9 @@ In the project directory, you can run:
 
 Runs the server that provides the token used for logging in. Without it you can't log into the app.
 
+### `npm install express` and `npm install cors`
+The server uses express js and cors.
+
 ### `npm start`
 
 Runs the app in the development mode.\
